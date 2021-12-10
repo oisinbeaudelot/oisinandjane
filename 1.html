@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oisin &amp; Jane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+	body {
+		background-color: black;
+		background-image: url(bg.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+	
+	.city img, .moon img, .silhouette img {
+		position: absolute;
+		display: block;
+	}
+	
+	.moon img {
+		max-height: 100vh;
+		width: 150vw;
+		margin: -15% 0 0 -50%;
+	}
+	
+	.city img {
+		bottom: 0;
+	}
+	
+	.silhouette img {
+		bottom: 0;
+	}
+@media (max-aspect-ratio: 29/34) {
+	.moon img {
+		width: 350vw;
+		margin: -50vw 0 0 -130vw;
+	}
+	.city img {
+		right: -50vw;
+		width: 300vw;
+	}
+	.silhouette img {
+		width: 200vw;
+	}
+	}
+</style>
+</head>
+
+<body>
+	<div class="home__landing">
+		<div class="city">
+			<img src="city_.svg" alt="">
+		</div>
+		<div class="moon">
+			<img src="moon.svg" alt="">
+		</div>
+		<div class="silhouette">
+			<img src="silhouette.svg" alt="">
+		</div>
+	</div>
+	
+</body>
+</html>
