@@ -18,18 +18,22 @@
 		padding: 0;
 		margin: 0;
 	}
-	.banner-container {
-		
-	}
-	#banner {
+	#banner, #banner-top, #banner-bottom, #banner-bottom2 {
 		z-index: 2;
 		position: absolute;
 		font-family: 'Noto Serif', serif;
-		font-weight: normal;
-		font-size: 250%;
+		font-weight: bolder;
+		font-size: 180%;
 	}
-	#banner text {
+	#banner-bottom {
+		font-weight: normal;
+		font-size: 90%;
+	}
+	#banner text, #banner-top text, #banner-bottom text, a {
 	  fill: #253966;
+	}
+	#banner-bottom text, a {
+	  fill: #665825;
 	}
 	#banner-bg {
 		z-index: 1;
@@ -46,15 +50,16 @@
 	.home__landing__graphic img {
 		padding: 2%;
 		max-height: 90vh;
+		margin-left: 10%;
 	}
 	.home__landing__banner {
 		display: grid;
 		position: relative;
-		width: 80%;
-		max-width: 300px;
+		width: 120%;
+		max-width: 500px;
 		align-items: center;
-		margin-top: 40vh;
-		margin-left: -20%;
+		margin-top: 30vh;
+		margin-left: -30%;
 	}
 @media (max-aspect-ratio: 29/34) {
 	body {
@@ -71,11 +76,12 @@
 	}
 	.home__landing__graphic img {
 		max-height: 75vh;
+		margin-left: 10%;
 	}
 	.home__landing__banner {
-		max-width: 60vw;
+		max-width: 80vw;
 		height: 20vh;
-		margin-left: 18%;
+		margin-left: 10%;
 		max-height: 20vh;
 		margin-top: 0;
 		align-self: flex-end;
@@ -91,15 +97,32 @@
 		</div>
 		<div class="home__landing__banner">
 			<div class="banner-container">
-				<img src="banner-graphic.svg" id="banner-bg" alt="">
-				<svg version="1.1" id="banner" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 436.983 114.154" style="enable-background:new 0 0 436.983 114.154;" xml:space="preserve">
-<path id="curve" style="fill:none;stroke:#FFFFFF;stroke-miterlimit:10;" d="M88.284,86.885c31.377,1.917,89.3-16.143,89.3-16.143
-	c12.354-3.771,36.367-11.046,62.576-16.293c28.227-5.651,51.753-7.498,67.13-8.179c18.288-0.28,44.977,0.944,73.166,8.585"/>
+				<img src="actual-text-path_4.svg" id="banner-bg" alt="">
+				
+				<svg version="1.1" id="banner-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 436.983 153.159" style="enable-background:new 0 0 436.983 153.159;" xml:space="preserve">
+<path id="curve-top" style="fill:none;stroke:none;stroke-miterlimit:10;" d="M97.11,91.05c29.591,0.135,89.3-17.143,89.3-17.143
+	c12.354-3.771,36.367-10.046,62.576-15.293c28.227-5.651,51.753-7.498,67.13-8.179c18.288-0.28,44.381,2.415,72.166,12.585"/>
 					<text width="500">
-						<textpath xlink:href="#curve" startOffset="12%">4th Sept 2024</textpath>
+						<textpath xlink:href="#curve-top" startOffset="0%" letter-spacing="-0.5px">3rd, 4th, 5th Sep 2024</textpath>
 					</text>
-				</svg>
+
+</svg>
+				
+				<svg version="1.1" id="banner-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 436.983 153.159" style="enable-background:new 0 0 436.983 153.159;" xml:space="preserve">
+<path id="curve-bottom" style="fill:none;stroke:none;stroke-miterlimit:10;" d="M97.11,118.052c31.377,1.917,67.639-11.089,89.3-18.143
+	c12.282-4,37.367-9.046,63.576-14.293c28.227-5.651,51.666-5.873,67.13-5.179c18.594,0.834,42.537,0.992,71.166,15.586"/>
+					<text width="500">
+						<a href="https://goo.gl/maps/9bN7m22nkXhxLWzX6"><textpath xlink:href="#curve-bottom" startOffset="6%" letter-spacing="-0.5px"> Château de la Colaissière</textpath></a>
+					</text>
+<path id="curve-bottom2" style="fill:none;stroke:none;stroke-miterlimit:10;" d="M97.11,118.052c31.377,1.917,67.639-11.089,89.3-18.143
+	c12.282-4,37.367-9.046,63.576-14.293c28.227-5.651,51.666-5.873,67.13-5.179c18.594,0.834,42.537,0.992,71.166,15.586"/>
+					<text width="500">
+						<a href="oisinandjane_wedding_event.ics"><textpath xlink:href="#curve-bottom2" startOffset="65%" letter-spacing="-1px"> Add to Calendar</textpath></a>
+					</text>
+</svg>
+				
 			</div>
 		</div>
 	</div>
