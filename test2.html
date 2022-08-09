@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" type="text/css">
+<script src="docs/jquery.min.js"></script> 
+<!-- Google Form Submit -->
+<script type="text/javascript">
+	$(function () {
+      $('#gform').on('submit', function(e) {
+ 			  $('#name, #email, #message, #diet, #song, #artist, #song-link').css({
+         	'background-color': 'var(--secondary-color-lighter)',
+         	'color': 'var(--primary-color-lighter)'
+    		});
+        $('.radio-text').css({
+         	'color': 'var(--secondary-color-lighter)'
+    		});
+			 $('#submitbutton').val('Sent!');
+      $('input').addClass('placeholder--submitted');
+      $('textarea').addClass('placeholder--submitted');
+      $('#submitbutton').css({
+        'background-color': 'var(--background-color)',
+        'border': 'var(--line-thickness) solid var(--primary-color)',
+        'color': 'var(--primary-color)'
+      });
+		  $("#submitbutton").attr("disabled", true);
+      })
+})
+  </script>
+<!-- END Google Form Submit -->
+<title>Oisin &amp; Jane are getting married!</title>
+<style>
+</style>
+</head>
+
+<body>
+	<div class="landing-page">
+		<div class="grid-container">
+			<div class="grid-item home-menu grid-item-1">
+				<div><h2>Need to Knows</h2></div>
+			</div>
+			<div class="grid-item home-menu grid-item-2">
+				<div><h2>The Destination</h2></div>
+			</div>
+			<div class="grid-item home-menu grid-item-3">
+				<div><h2>RSVP/Contact</h2></div>
+			</div>
+			<div class="grid-item home-menu grid-item-4">
+				<div><h2>Order of Events</h2></div>
+			</div>
+			<div class="grid-item home-menu grid-item-5" id="title">
+				<picture>
+				  <source srcset="images/title-01.001.png" type="image/png"> 
+				  <img src="images/title-01.000.png" alt="Alt Text!">
+				</picture>
+			</div>
+			<div class="grid-item home-menu grid-item-6">
+				<div><h2>FAQs</h2></div>
+			</div>
+		</div>
+		<div class="hero-grid">
+			<div>
+				<picture>
+				  <source srcset="images/cover-image.png" type="image/png"> 
+				  <img src="images/cover-image.png" alt="Oisin and Jane">
+				</picture>
+			</div>
+			<div class="hero-message">
+				<div class="hero-message__text">
+					<h3>
+						Dear friends and relatives,
+					</h3>
+					<p class="white-color">
+						We are delighted to share our joy with you, on this special moment in our lives, at the beautiful Château de la Colaissière.
+						<br><br>
+						In preparation for the big day, we have created this site to share all the news and information in one place. You can find all the information you need about travel, acommodation, order of events, and if you can't find what you need.
+						<br><br>
+						See you in Orée-d'Anjou!
+						<br><br>
+						Oisin &amp; Jane
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-settings need-to-know-page">
+		<div class="page-heading home-menu">
+			<div class=""><h2>Need to Knows</h2></div>
+		</div>
+		<div class="need-to-know__container">
+			<div class="need-to-know__grid-item">
+				<h3>Dates [Add to Calendar]</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+			<div class="need-to-know__grid-item">
+				<h3>Menu [Download PDF]</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+			<div class="need-to-know__grid-item">
+				<h3>Location [Link to Map]</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+			<div class="need-to-know__grid-item">
+				<h3>Dress Code</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+			<div class="need-to-know__grid-item">
+				<h3>Cost (or lack thereof)</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+			<div class="need-to-know__grid-item">
+				<h3>No Gifts</h3>
+				<p>Subtitle Here I Guess</p>
+			</div>
+		</div>
+	</div>
+	<div class="page-settings destination-page">
+		<div class="page-heading home-menu">
+			<div class=""><h2>The Destination</h2></div>
+		</div>
+		<div class="destination-photos">
+			<picture class="destination-photos--1">
+					  	<source srcset="images/polaroid2.jpg" type="image/jpeg"> 
+					  	<img src="images/polaroid2.jpg" alt="Alt Text!">
+					</picture>
+					<picture class="destination-photos--2">
+					  	<source srcset="images/polaroid3.jpg" type="image/jpeg"> 
+					  	<img src="images/polaroid3.jpg" alt="Alt Text!">
+					</picture>
+					<picture class="destination-photos--3">
+					  	<source srcset="images/polaroid4.jpg" type="image/jpeg"> 
+					  	<img src="images/polaroid4.jpg" alt="Alt Text!">
+					</picture>
+					<picture class="destination-photos--4">
+					  	<source srcset="images/polaroid1.jpg" type="image/jpeg"> 
+					  	<img src="images/polaroid1.jpg" alt="Alt Text!">
+					</picture>
+		</div>
+		<div class="destination-text">
+			<div class="destination-text__summary">
+				<h3>Château de la Colaissière</h3>
+            	<p>37 Rue de Calvaire, 49270 Orée-d'Anjou, FRANCE</p>
+				<br>
+				<p>We are delighted to welcome you to the stunning grounds of the Château, nestled in the hidden scapes of the Loire Valley. Located in Orée-d'Anjou, the château boasts a pleasant courtyard, dining hall, all surrounded by a serene moat.</p>
+			</div>
+			<div class="destination-text__ways-to-travel">
+				<div class="destination-text__row">
+				  <div class="destination-text__col">
+					<h4>Ways to Travel</h4>
+					<div class="destination-text__tabs">
+					  <div class="destination-text__tab">
+						<input type="checkbox" id="destination-text__cb1">
+						<label class="destination-text__tab-label" for="destination-text__cb1">Nearest Airport: Nantes</label>
+						<div class="destination-text__tab-content">
+						  [DETAILS ABOUT FLIGHTS HERE!]<br>
+							[DETAILS ABOUT FLIGHTS HERE!]<br>
+							[DETAILS ABOUT FLIGHTS HERE!]<br>
+						</div>
+					  </div>
+					  <div class="destination-text__tab">
+						<input type="checkbox" id="destination-text__cb2">
+						<label class="destination-text__tab-label" for="destination-text__cb2">From Cherbourg via Ferry</label>
+						<div class="destination-text__tab-content">
+						  [DETAILS ABOUT CHERBOURG HERE!]
+						</div>
+					  </div>
+                      <div class="destination-text__tab">
+						<input type="checkbox" id="destination-text__cb3">
+						<label class="destination-text__tab-label" for="destination-text__cb3">From Paris</label>
+						<div class="destination-text__tab-content">
+						  [DETAILS ABOUT PARIS HERE!]
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+			<div class="destination-text__ways-to-travel">
+				<div class="destination-text__row">
+				  <div class="destination-text__col">
+					<h4>Accommodation</h4>
+					<div class="destination-text__tabs">
+					  <div class="destination-text__tab">
+						<input type="checkbox" id="destination-text__cb4">
+						<label class="destination-text__tab-label" for="destination-text__cb4">In the Château</label>
+						<div class="destination-text__tab-content">
+						  <ul>
+							<li>X Rooms for X People</li>
+							<li>Bathroom Facilities</li>
+							  <li>Breakfast &amp; Food</li>
+							  <li>Castle Map PDF</li>
+						</ul>
+						</div>
+					  </div>
+					  <div class="destination-text__tab">
+						<input type="checkbox" id="destination-text__cb5">
+						<label class="destination-text__tab-label" for="destination-text__cb5">Hotel Accommodation</label>
+						<div class="destination-text__tab-content">
+						  [DETAILS ABOUT HOTEL ACCOM HERE!]
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="page-watermark">
+			<img src="images/watermark1.jpg" alt="">
+		</div>
+	</div>
+	<div class="page-settings order-of-events-page">
+        <div class="page-heading home-menu">
+            <div class=""><h2>Order of Events</h2></div>
+        </div>
+        <div class="timeline-main">
+          <div class="timeline-container">
+            <div class="timeline__line__container">
+              <svg version="1.1" id="timeline__line" viewBox="0 0 50 50"  preserveAspectRatio="none">
+              <path class="" d="M1 0 v1 100"></path>
+            </svg>
+            </div>
+            <div class="timeline-items">
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">13&#58;30</span>
+                    <span class="timeline-item__heading">Official Welcome</span>
+                    <div class="timeline-item__description">Make your way to the beautiful courtyard of the château, ready to take your seat for the ceremony.<br>
+                    <a href="">View Château Map</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">14&#58;30</span>
+                    <span class="timeline-item__heading">Ceremony</span>
+                    <div class="timeline-item__description">
+                      *Il Mondo sounds*<br>
+                      Everyone cries.
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">15&#58;00</span>
+                    <span class="timeline-item__heading">Cocktail Hour</span>
+                    <div class="timeline-item__description">
+                      Enjoy a refreshment in the courtyard, with our photographer extraordinaire capturing some heartful moments.
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">17&#58;00</span>
+                    <span class="timeline-item__heading">Dinner Served</span>
+                    <div class="timeline-item__description">
+                      Dig in to 5-courses of French cuisine, with a selection of wines chosen to pair with the menu.<br>
+                      <a href="">View Full Menu</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">20&#58;00</span>
+                    <span class="timeline-item__heading">Cake O'Clock</span>
+                    <div class="timeline-item__description">
+                      On your mark, get set, BAKE!
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">21&#58;00</span>
+                    <span class="timeline-item__heading">First Dance &amp; Music Starts</span>
+                    <div class="timeline-item__description">
+                      A wamba buluba, balam bamboo!
+                    </div>
+                  </div>
+                </span>
+              </div>
+              <div class="timeline-item">
+                <span class="dot">
+                  <div class="timeline-item__text">
+                    <span class="timeline-item__time">23&#58;00</span>
+                    <span class="timeline-item__heading">Snack Attack</span>
+                    <div class="timeline-item__description">
+                      "Ní geal an gáire ach san áit a mbíonn an biadh.""
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>	
+		</div>
+  	<div class="page-settings contact-page">
+      <div class="page-heading home-menu">
+        <div class=""><h2>RSVP / Contact</h2></div>
+      </div>
+      <div class="contact-form__container">
+        <div class="contact-form__contents">
+          
+          <form name="gform" id="gform" class="contact-form__grid-item" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <h3>Name(s)</h3>
+            <input required class="contact-form__text-field" type="text" id="name" name="entry.390305579NEEDED" placeholder="E.g. John Jacob Jingleheimer Schmidt">
+            
+            <label class="contact-form__radio-button">
+              <input type="radio" name="attend-select">
+              <span class="radio-text">Will be attending</span>
+              <span class="checkmark"></span>
+            </label>
+            <label class="contact-form__radio-button">
+              <input type="radio" name="attend-select">
+              <span class="radio-text">Will not be attending</span>
+              <span class="checkmark"></span>
+            </label>
+            <h3>Contact Email</h3>
+            <input required class="contact-form__text-field" type="email" id="email" name="entry.1577486740NEEDED" placeholder="youraddresshere@email.com">
+            <h3>Menu</h3>
+            <label class="contact-form__radio-button">
+              <input type="radio" name="menu-select">
+              <span class="radio-text">Menu Option 1</span>
+              <span class="checkmark"></span>
+            </label>
+            <label class="contact-form__radio-button">
+              <input type="radio" name="menu-select">
+              <span class="radio-text">Menu Option 2</span>
+              <span class="checkmark"></span>
+            </label>
+            <label class="contact-form__radio-button">
+              <input type="radio" name="menu-select">
+              <span class="radio-text">Menu Option 3</span>
+              <span class="checkmark"></span>
+            </label>
+            <input class="contact-form__text-field" type="text" id="diet" name="entry.1577486740NEEDED" placeholder="Any allergies/dietary requirements?">
+            
+            <h3>Song Request</h3>
+            <input class="contact-form__text-field" type="text" id="song" name="entry.1577486740NEEDED" placeholder="Song Title">
+            <input class="contact-form__text-field" type="text" id="artist" name="entry.1577486740NEEDED" placeholder="Song Artist">
+            <input class="contact-form__text-field" type="text" id="song-link" name="entry.1577486740NEEDED" placeholder="Link (e.g. YouTube, Spotify)">
+            
+            <textarea class="contact-form__text-field" rows="3" id="message" name="entry.1790357440" placeholder="Any other information can go here"></textarea>
+            <div class="contact-form__submit"><input type="submit" name="submit" value="Submit" id="submitbutton"></div>
+          </form>
+			  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+        
+        </div>
+        </div>
+    </div>
+</body>
+</html>
