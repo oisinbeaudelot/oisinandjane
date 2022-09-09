@@ -5,8 +5,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link href="styles.css" rel="stylesheet" type="text/css">
-<script src="docs/jquery.min.js"></script> 
+<link href="styles_test.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!--<script src="docs/jquery.min.js"></script> -->
 <!-- Google Form Submit -->
 <script type="text/javascript">
 	$(function () {
@@ -37,19 +38,19 @@
 </head>
 
 <body>
-	<div class="landing-page">
+	<section class="landing-page" id="landing-page">
 		<div class="grid-container">
 			<div class="grid-item home-menu grid-item-1">
-				<div><h2>Need to Knows</h2></div>
+				<div><h2><a href="">Need to Knows</a></h2></div>
 			</div>
 			<div class="grid-item home-menu grid-item-2">
-				<div><h2>The Destination</h2></div>
+				<div><a href=""><h2>The Destination</h2></a></div>
 			</div>
 			<div class="grid-item home-menu grid-item-3">
-				<div><h2>RSVP/Contact</h2></div>
+				<div><h2><a href="">RSVP/&thinsp;Contact</a></h2></div>
 			</div>
 			<div class="grid-item home-menu grid-item-4">
-				<div><h2>Order of Events</h2></div>
+				<div><h2><a href="">Order of Events</a></h2></div>
 			</div>
 			<div class="grid-item home-menu grid-item-5" id="title">
 				<picture>
@@ -58,7 +59,7 @@
 				</picture>
 			</div>
 			<div class="grid-item home-menu grid-item-6">
-				<div><h2>FAQs</h2></div>
+				<div><h2><a href="">FAQs</a></h2></div>
 			</div>
 		</div>
 		<div class="hero-grid">
@@ -85,8 +86,15 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="page-settings need-to-know-page">
+	</section>
+	<section class="page-settings need-to-know-page" id="need-to-know-page">
+    <div class="scroll-snap-point remove-scroll-snap-class" id="remove-scroll-snap"></div>
+    <div class="img-scroll">
+      <div class="img-scroll__container">
+        <img id="blur" class="img-scroll__image" src="images/need-to-know-bg-smaller.jpg" alt="">
+        <!-- <img id="no-blur" class="img-scroll__image" src="images/need-to-know-bg.jpg" alt=""> -->
+      </div>
+    </div>
 		<div class="page-heading home-menu">
 			<div class=""><h2>Need to Knows</h2></div>
 		</div>
@@ -116,8 +124,13 @@
 				<p>Subtitle Here I Guess</p>
 			</div>
 		</div>
-	</div>
-	<div class="page-settings destination-page">
+	</section>
+  <section id="need-to-know__scroll-buffer">
+    <div class="enable-buffer">
+    </div>
+  </section>
+	<section class="page-settings destination-page">
+    <div class="scroll-snap-point remove-scroll-snap-class"></div>
 		<div class="page-heading home-menu">
 			<div class=""><h2>The Destination</h2></div>
 		</div>
@@ -133,10 +146,6 @@
 					<picture class="destination-photos--3">
 					  	<source srcset="images/polaroid4.jpg" type="image/jpeg"> 
 					  	<img src="images/polaroid4.jpg" alt="Alt Text!">
-					</picture>
-					<picture class="destination-photos--4">
-					  	<source srcset="images/polaroid1.jpg" type="image/jpeg"> 
-					  	<img src="images/polaroid1.jpg" alt="Alt Text!">
 					</picture>
 		</div>
 		<div class="destination-text">
@@ -210,8 +219,9 @@
 		<div class="page-watermark">
 			<img src="images/watermark1.jpg" alt="">
 		</div>
-	</div>
-	<div class="page-settings order-of-events-page">
+	</section>
+	<section class="scroll-snap-point page-settings order-of-events-page">
+    <div class=" remove-scroll-snap-class"></div>
         <div class="page-heading home-menu">
             <div class=""><h2>Order of Events</h2></div>
         </div>
@@ -305,12 +315,13 @@
             </div>
           </div>
         </div>	
-		</div>
-  	<div class="page-settings contact-page">
+  </section>
+  	<section class="page-settings contact-page" id="test-visibility">
+      <div class="scroll-snap-point"></div>
       <div class="page-heading home-menu">
         <div class=""><h2>RSVP / Contact</h2></div>
       </div>
-      <div class="contact-form__container">
+      <div class="contact-form__container" id="test-scroll">
         <div class="contact-form__contents">
           
           <form name="gform" id="gform" class="contact-form__grid-item" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSd9eh5UUwzPc1axBAP_QfRFHYQQfBKNeluXn10EU-Wo88_ghw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
@@ -351,14 +362,76 @@
             <input class="contact-form__text-field" type="text" id="song" name="entry.1577486740NEEDED" placeholder="Song Title">
             <input class="contact-form__text-field" type="text" id="artist" name="entry.1577486740NEEDED" placeholder="Song Artist">
             <input class="contact-form__text-field" type="text" id="song-link" name="entry.1577486740NEEDED" placeholder="Link (e.g. YouTube, Spotify)">
-            
+            <h3>Message</h3>
             <textarea class="contact-form__text-field" rows="3" id="message" name="entry.1790357440" placeholder="Any other information can go here"></textarea>
-            <div class="contact-form__submit"><input type="submit" name="submit" value="Submit" id="submitbutton"></div>
+            <div class="spacer"></div>
+            <div class="contact-form__submit">
+              <input type="submit" name="submit" value="Submit" id="submitbutton">
+              <div class="spacer"></div>
+            </div>
           </form>
 			  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-        
         </div>
         </div>
-    </div>
+    </section>
+
+<!-- GSAP Scripts --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+<script src="docs/scrolljack-effect.js"></script>
+<!-- <script src="docs/remove-scroll-snap.js"></script> -->
+
+<script>
+  var classToremove = 'remove-scroll-snap-class';
+  var targetID = "remove-scroll-snap";
+  var scrollTriggerElem = '.scroll-snap-point';
+  var distanceBeforeTrigger = '-10px';
+  
+  //var removeElement = document.getElementById(targetID);
+
+  // Receiving options as an object
+  // If the user doesn't pass any options, the default will be `{}`
+  function scrollTrigger(selector, options = {}){
+      let els = document.querySelectorAll(selector)
+      els = Array.from(els)
+      els.forEach(el => {
+      // Passing the options object to the addObserver function
+          addObserver(el, options)
+      })
+  }
+
+  // Receiving options passed from the scrollTrigger function
+  function addObserver(el, options){
+      if(!('IntersectionObserver' in window)){
+          if(options.cb){
+              options.cb(el)
+          }else{
+              entry.target.classList.remove(classToremove)
+              console.log("Seen1")
+          }
+          return
+      }
+      let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
+          entries.forEach(entry => {
+              if(entry.isIntersecting){
+                  if(options.cb){
+                      options.cb(el)
+                  }else{
+                      entry.target.classList.remove(classToremove)
+                      console.log("Seen2")
+                  }
+                  //observer.unobserve(entry.target)
+              }
+          })
+      }, options) // Passing the options object to the observer
+      observer.observe(el)
+  }
+  // Run the actual script w options
+  scrollTrigger(scrollTriggerElem, {
+    rootMargin: distanceBeforeTrigger})
+</script>
+
+
+
 </body>
 </html>
