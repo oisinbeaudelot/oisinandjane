@@ -660,7 +660,7 @@ input[type=submit] {
   height: 20px;
 }
 /* <<<<<<<<<<Mobile Aspect Ratio >>>>>>>>>>>>>>>*/
-@media (max-aspect-ratio: 29/34) or (max-width: 500px) {
+@media (max-aspect-ratio: 29/34) {
   
   :root {
 		--line-thickness: 2px;
