@@ -54,13 +54,12 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: visible;
-		
-	}
-body, html {
-		margin: 0;
+    margin: 0;
 		/*scroll-snap-type: y proximity;*/
 		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
-		-webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+	}
+body, html {
 		font-family: 'Helvetica Neue', sans-serif;
 	}
 section {
