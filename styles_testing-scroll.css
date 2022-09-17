@@ -1,54 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-	/* Change Autocomplete styles in Chrome*/
-	:root {
-		--primary-color: #a59149;
-		--secondary-color: #111111;
-    --secondary-color-light: #393939;
-    --secondary-color-lighter: #A5A5A5;
-		--primary-color-dark: #8c7a3f;
-		--primary-color-darker: #59522e;
-		--primary-color-light: #beb462;
-		--primary-color-lighter: #f3eedc;
-		--quaternary-color: ;
-		--background-color: #F6F6F6;
-		--background-color-darker: ;
-		--hero-color: ;
-		--text-color: ;
-		--footer-color: ;
-		--line-thickness: 2px;
-    --timeline-items-width: 15px;
-    --timeline-dot-border-width: 2.5px;
-    --smallest-text: 1rem;
-    --button-text: 1.2rem;
-    --font-family: 'Helvetica Neue';
-	}
-	h2, h2 a {
-		font-family: 'Noto Serif', serif;
-		font-variant: small-caps;
-		color: var(--background-color);
-		padding: 0;
-		margin: 0;
-	}
-	@font-face { 
-			font-family: var(--font-family); 
-			src: url('file:///SSD DRIVE/Users/oisinbeaudelot/Documents/Wedding Website/HTML Files/HelveticaNeue.ttc') format('woff2');
-		}
-	h3 {
-		font-weight: bold;
-	}
-	h4 {
-		font-weight: bold;
-	}
-	p {
-		font-weight: 300;
-	}
-  a, a:visited, a:hover {
-    text-decoration: none;
-  }
-	.white-color {
-		color: var(--background-color);
-	}
+
 	body, html {
 		height: 100%;
 		width: 100%;
