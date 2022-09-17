@@ -51,12 +51,12 @@
 	}
 	body {
 		height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
 		
 	}
 body, html {
-    width: 100%;
-		overflow-x: hidden;
-    overflow-y: visible;
 		margin: 0;
 		/*scroll-snap-type: y proximity;*/
 		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
