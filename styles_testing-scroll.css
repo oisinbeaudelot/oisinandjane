@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+	/* Change Autocomplete styles in Chrome*/
+	:root {
+		--primary-color: #a59149;
+		--secondary-color: #111111;
+    --secondary-color-light: #393939;
+    --secondary-color-lighter: #A5A5A5;
+		--primary-color-dark: #8c7a3f;
+		--primary-color-darker: #59522e;
+		--primary-color-light: #beb462;
+		--primary-color-lighter: #f3eedc;
+		--quaternary-color: ;
+		--background-color: #F6F6F6;
+		--background-color-darker: ;
+		--hero-color: ;
+		--text-color: ;
+		--footer-color: ;
+		--line-thickness: 2px;
+    --timeline-items-width: 15px;
+    --timeline-dot-border-width: 2.5px;
+    --smallest-text: 1rem;
+    --button-text: 1.2rem;
+    --font-family: 'Helvetica Neue';
+	}
+	h2, h2 a {
+		font-family: 'Noto Serif', serif;
+		font-variant: small-caps;
+		color: var(--background-color);
+		padding: 0;
+		margin: 0;
+	}
+	@font-face { 
+			font-family: var(--font-family); 
+			src: url('file:///SSD DRIVE/Users/oisinbeaudelot/Documents/Wedding Website/HTML Files/HelveticaNeue.ttc') format('woff2');
+		}
+	h3 {
+		font-weight: bold;
+	}
+	h4 {
+		font-weight: bold;
+	}
+	p {
+		font-weight: 300;
+	}
+  a, a:visited, a:hover {
+    text-decoration: none;
+  }
+	.white-color {
+		color: var(--background-color);
+	}
+	body, html {
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		margin: 0;
+		/*scroll-snap-type: y proximity;*/
+		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+		-webkit-text-size-adjust: 100%;
+		font-family: 'Helvetica Neue', sans-serif;
+	}
+section {
+  /*scroll-snap-type: y proximity;*/
+}
+.scroll-snap-point {
+  scroll-snap-align: start;
+}
+.page-settings {
+	width: 100%;
+  min-height: 100%; /* OOE and N2K pages height is set manually*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.page-heading {
+	padding-top: 100px;
+	margin: auto auto auto 40px;
+	width: 80%;
+	max-width: 400px;
+	text-align: center;
+}
+	/* <<<<<<<<<<<< Landing Page >>>>>>>>>>>>>> */
+	.landing-page {
+		background-color:hsla(47,0%,0%,1);
+background-image:
+radial-gradient(at 67% 78%, hsla(332,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 91% 13%, hsla(94,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 35% 39%, hsla(329,0%,0%,1) 0px, transparent 50%),
+radial-gradient(at 98% 97%, hsla(297,0%,24%,1) 0px, transparent 50%),
+radial-gradient(at 37% 0%, hsla(104,0%,24%,1) 0px, transparent 50%);
+		width: 100%;
+		height: 100%;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	.grid-container {
+		height: 30%;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+		grid-auto-rows: minmax(0, 1fr) minmax(0, 1fr);
+		grid-gap: 20px;
+		text-align: center;
+		align-items: center;
+	}
+	.grid-container > #title {
+		align-items: flex-start;
+	}
+	.home-menu div {
+		border-top: 1px solid var(--primary-color);
+		margin: 0 auto;
+		width: 80%;
+		max-width: 300px;
+    transition: all 0.35s;
+	}
+.home-menu div:hover {
+  transform: scale(1.2);
+  transition: all 0.35s;
+}
+	#title picture, #title img {
+		max-width: 100%;
+		max-height: 30vh;
+	}
+	.hero-grid {
+		height: 70%;
+		display: grid;
+		grid-template-columns: minmax(0,1fr) minmax(0, 1fr);
+		grid-gap: 20px;
+		align-content: flex-end;
+		align-items: center;
+		text-align: right;
+	}
+	.hero-grid picture, .hero-grid img {
+		max-width: 100%;
+		max-height: 60vh;
+		opacity: 0.8;
+		mix-blend-mode: lighten;
+	}
+	.hero-message {
+		position: relative;
+	}
+	.hero-message__text {
+		text-align: left;
+		padding: 20px 30px;
+		width: 80%;
+		height: 30vh;
+		max-width: 500px;
+		background-color: var(--primary-color-dark);
+		z-index: 2;
+		margin: auto auto 5vh auto;
+		box-shadow: 10px 10px 0 -2px var(--secondary-color), 10px 10px 0 0 var(--background-color);
+	}
