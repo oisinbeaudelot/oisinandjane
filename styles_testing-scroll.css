@@ -4,10 +4,4 @@
 	body, html {
 		height: 100%;
 		width: 100%;
-		overflow-x: hidden;
-		margin: 0;
-		/*scroll-snap-type: y proximity;*/
-		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
-		-webkit-text-size-adjust: 100%;
-		font-family: 'Helvetica Neue', sans-serif;
 	}
