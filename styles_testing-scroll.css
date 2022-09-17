@@ -58,9 +58,7 @@
 		/*scroll-snap-type: y proximity;*/
 		-webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
     -webkit-text-size-adjust: 100%;
-	}
-body, html {
-		font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
 	}
 section {
   /*scroll-snap-type: y proximity;*/
