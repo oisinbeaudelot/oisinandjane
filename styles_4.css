@@ -176,7 +176,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url(images/white-paper-bg-50pctOpacity.jpg);
+  background-image: url(images/white-paper-bg-50pctOpacity.webp);
 }
 .hero {
   width: 100%;
@@ -241,7 +241,7 @@ p {
 .full-page {
 	width: 100%;
 	height: 110%;
-	background-image: url(images/proposal-sacre-coeur.jpg);
+	background-image: url(images/proposal-sacre-coeur.webp);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -284,7 +284,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-image: url("images/white-paper-bg-50pctOpacity.jpg");
+  background-image: url("images/white-paper-bg-50pctOpacity.webp");
   background-size: auto;
   max-width: 800px;
   
@@ -311,7 +311,7 @@ box-shadow:
 
 /* ********** Essentials Page ********** */
 #essentials {
-	background-image: url(images/need-to-know-alt_blur_dark.jpg);
+	background-image: url(images/need-to-know-alt_blur_dark.webp);
 }
 .essentials-grid {
 	display: grid;
@@ -684,7 +684,7 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
   width: 100%;
   height: 50vh;
   position: absolute;
-  background-image: url("images/euc-leaves.jpg");
+  background-image: url("images/euc-leaves.webp");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -806,7 +806,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 
 /* RSVP / Contact Page */
 #rsvp {
-	/*background-image: url("images/need-to-know-alt_blur.jpg");*/
+	/*background-image: url("images/need-to-know-alt_blur.webp");*/
   /*background-color: var(--green-color);*/
   background-color: var(--orange-color);
 }
@@ -824,7 +824,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
   max-width: 1000px;
 }
 .rsvp__content__image {
-  background-image: url("images/autumn-vibes.jpg");
+  background-image: url("images/autumn-vibes.webp");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -838,7 +838,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
   width: 100%;
 }
 .rsvp__content__form {
-  background-image: url(images/white-paper-bg-50pctOpacity.jpg);
+  background-image: url(images/white-paper-bg-50pctOpacity.webp);
   padding: 50px 75px 0px 75px;
   box-shadow:
        0 3.9px 4.6px rgba(0, 0, 0, 0.08),
@@ -1098,7 +1098,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url(images/white-paper-bg-50pctOpacity.jpg);
+  background-image: url(images/white-paper-bg-50pctOpacity.webp);
 }
 .hero {
   width: 100vw;
@@ -1177,7 +1177,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
   
 /* ********** Essentials Page ********** */
 #essentials {
-	background-image: url(images/need-to-know-alt_blur_dark.jpg);
+	background-image: url(images/need-to-know-alt_blur_dark.webp);
 }
 .essentials-grid {
 	grid-template-columns: 1fr;
@@ -1281,7 +1281,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
   height: 120vh;
   max-height: none;
   position: absolute;
-  background-image: url("images/chateau10_bg2.jpg");
+  background-image: url("images/chateau10_bg2.webp");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
