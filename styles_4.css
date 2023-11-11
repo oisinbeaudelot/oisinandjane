@@ -697,7 +697,7 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
   height: 120vw;
   max-height: 200vh;
   position: absolute;
-  background-image: url("images/chateau10_bg2.jpg");
+  background-image: url("images/chateau10_bg2.webp");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -806,7 +806,9 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
 
 /* RSVP / Contact Page */
 #rsvp {
-	background-image: url("images/need-to-know-alt_blur.jpg");
+	/*background-image: url("images/need-to-know-alt_blur.jpg");*/
+  /*background-color: var(--green-color);*/
+  background-color: var(--orange-color);
 }
 
 #rsvp .page-heading {
@@ -822,8 +824,8 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
   max-width: 1000px;
 }
 .rsvp__content__image {
-  background-image: url("images/paris-rues_color.jpg");
-  background-position: center;
+  background-image: url("images/autumn-vibes.jpg");
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow:
