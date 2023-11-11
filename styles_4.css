@@ -1180,6 +1180,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
 	background-image: url(images/need-to-know-alt_blur_dark.webp);
 }
 .essentials-grid {
+  grid-gap: 5rem;
 	grid-template-columns: 1fr;
 	margin: 2rem auto 0 auto;
 	width: 90vw;
@@ -1246,6 +1247,24 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
 .destination__painting img {
   width: 100%;
 }
+
+
+
+/* Images Divider */
+.images-divider__container {
+  height: 40vw;
+}
+
+.images-divider__grid {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 70vw;
+}
+.images-divider__image {
+  border-width: 6px;
+  border-color: white;
+  border-style: solid;
+  width: 53%;
   
 /* ********** Order of Events ********** */
 
