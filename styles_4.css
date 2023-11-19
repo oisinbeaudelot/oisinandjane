@@ -1087,7 +1087,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
 }  
   
 .button-styling {
-	width: 80vw;
+	width: 70vw;
 }
   
 /* ******* LANDING PAGE ****** */
@@ -1219,8 +1219,9 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
   justify-content: space-around;
 	gap: 50px;
 	margin: 60px auto 0px auto;
-	width: 90vw;
+	width: 80vw;
 	text-align: center;
+  padding: 5vw;
 }
 
 .destination__content p {
@@ -1265,7 +1266,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
   border-color: white;
   border-style: solid;
   width: 53%;
-  
+  }
 /* ********** Order of Events ********** */
 
 
