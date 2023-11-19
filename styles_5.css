@@ -1111,7 +1111,7 @@ input#name:focus, input#email:focus, input#diet:focus, input#song:focus, textare
 }
 .hero {
   width: 100vw;
-  height: calc(100dvh - 30vh + 30vw);
+  height: calc(100dvh - 30dvh + 30vw);
   margin: 0;
   padding: calc(30dvh - 30vw) 0 0 0;
 }
