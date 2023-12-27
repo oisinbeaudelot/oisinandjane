@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:wght@100;200;300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />  
 <link href="styles_5.css" rel="stylesheet" type="text/css">
-  
+<link href="media-queries.css" rel="stylesheet" type="text/css">
 
   
   
@@ -154,8 +154,8 @@
 			<div class="essentials-grid__item">
 				<div class="essentials-grid__item1 font--light">Menu Options</div>
 				<div class="essentials-grid__item2">
-					menu option 1 with vegetable, side, and topped with a sauce<br><br>
-					menu option 2 with vegetable, side, and topped with a sauce
+					Menu Délicieux<br>
+					Menu Végétarien
 				</div>
 				<div class="essentials-grid__button__container"><a href="docs/oisin-and-jane-wedding-menu.pdf" target="_blank"><div class="essentials-grid__button button-styling">View Menu PDF</div></a></div>
 			</div>
@@ -163,8 +163,8 @@
 			
 			<div class="essentials-grid__item">
 				<div class="essentials-grid__item1 font--light">Misc</div>
-				<div class="essentials-grid__item2">dress code: wedding casual<br>
-					no gifts</div>
+				<div class="essentials-grid__item2">Dress Code: Dressy Casual<br>
+					We couldn’t wish for anything more from you, so please, no gifts required.</div>
 				<div class="essentials-grid__button__container"><div class="essentials-grid__button button-styling">Find Out More</div></div>
 			</div>
 		</div>
@@ -181,13 +181,65 @@
 		</div>
     
 		<div class="destination__content">
+      <div class="destination__margin-images__container--left">
+        <div class="destination__margin-images">
+          <div class="destination__margin-images__flex">
+            <picture class="destination__margin-image" id="destination__margin-image__1">
+                <!-- <source srcset="images/wide_polaroids3.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids3.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids3.webp" alt="Alt Text!">
+            </picture>
+            <picture class="destination__margin-image" id="destination__margin-image__2">
+                <!-- <source srcset="images/wide_polaroids4.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids4.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids4.webp" alt="Alt Text!">
+            </picture>
+            <picture class="destination__margin-image" id="destination__margin-image__3">
+                <!-- <source srcset="images/wide_polaroids10.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids10.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids10.webp" alt="Alt Text!">
+            </picture>
+          </div>
+        </div>
+      </div>
+    
+      
+      
 			<div>
 				<div class="font-family text--extra-large">Le Château de la Colaissière</div>
 				<div class="text--uppercase">37 Rue de Calvaire, <span class="mobile-only"><br></span>49270 Orée-d'Anjou, FRANCE</div>
 			</div>
-      <div class="destination__painting">
-        <img src="images/temp_chateaux-painting.webp" alt="">
+      <div class="destination__painting desktop-only">
+        <img src="images/chateaux_map_1.webp" alt="">
       </div>
+      <div class="destination__painting mobile-only">
+        <img src="images/chateaux_map_mobile.webp" alt="">
+      </div>
+      
+      
+      <div class="destination__margin-images__container--right">
+        <div class="destination__margin-images">
+          <div class="destination__margin-images__flex">
+            <picture class="destination__margin-image" id="destination__margin-image__1">
+                <!-- <source srcset="images/wide_polaroids9.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids9.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids9.webp" alt="Alt Text!">
+            </picture>
+            <picture class="destination__margin-image" id="destination__margin-image__2">
+                <!-- <source srcset="images/wide_polaroids8.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids8.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids8.webp" alt="Alt Text!">
+            </picture>
+            <picture class="destination__margin-image" id="destination__margin-image__3">
+                <!-- <source srcset="images/wide_polaroids6.webp" type="image/webp"> -->
+                <source srcset="images/wide_polaroids6.webp" type="image/jpeg"> 
+                <img src="images/wide_polaroids6.webp" alt="Alt Text!">
+            </picture>
+          </div>
+        </div>
+      </div>
+      
+      
 			<p class="font--light">
 				Nestled in the hidden scapes of the Loire Valley, We are delighted to welcome you to the stunning grounds of the Château de la colaissière. Located in the heart of the picturesque Orée-d'Anjou, the château boasts a comfortable courtyard, dining hall, all surrounded by a serene moat.
 			</p>
@@ -211,8 +263,11 @@
       </div>
       <div class="desktop-only spacer">&nbsp;</div>
         <p class="text--justify">
-          We’ll be in touch re: accommodation once all RSVPs have been received. The chateau can accommodate up to 44 people on the eve of the wedding and the wedding night. We are also coordinating a list of nearby hotels, from which a shuttle bus will run to the venue on the wedding day. The chateau will be booked through the couple, the hotel will be booked by the guests. More details to follow once all RSVPs have been received.
+          Our co-ordinator is arranging lodgement at a charming nearby hotel and will be in touch in due course to assist you with your booking. A shuttle will be available for hotel guests, ensuring a seamless journey to and from the ceremony and celebration.
+          <br><br>
+          Should you wish to make your own arrangements,  you are also welcome to explore the variety of accommodation available in the Orée-d’Anjou region.
         </p>
+      
 		</div>
 	</section>
   
@@ -253,9 +308,9 @@
   </section>
 	
 	<section class="page-settings" id="order-of-events">
-  <div class="faqs__background"></div>  
-  <div class="timeline__background"></div>
-  <div class="order-of-events-faqs__content">
+  <div class="faqs__background z-index--20"></div>  
+  <div class="timeline__background z-index--20"></div>
+  <div class="order-of-events-faqs__content z-index-20">
 		<div class="page-heading home-menu">
 			<div class=""><h2 class="page-heading__text">Order of Events</h2></div>
 		</div>
@@ -360,7 +415,7 @@
 </div>
     </div>
 
-		<div class="page-heading home-menu">
+		<div class="page-heading home-menu z-index-10">
 			<div class=""><h2 class="page-heading__text">Frequently Asked Questions</h2></div>
 		</div>
   
@@ -451,6 +506,8 @@
 
       <div class="rsvp__content__form">
          <form name="gform" id="gform" class="contact-form__grid-item" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf_WQbPtu7LTwcfPGN3IaEsshcnXMjlucUzKEZ4KmgYcuISYg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+           
+           <div class="contact-form__leaves contact-form__leaves__top"><img src="images/rsvp-leaves-1.webp" alt=""></div>
           <input required class="contact-form__text-field" type="text" id="name" name="entry.766857838" placeholder="Your Name*">
           <input required class="contact-form__text-field" type="email" id="email" name="entry.1581201997" placeholder="Your Email Address*">
            <div class="contact-form__radio-button__container">
@@ -491,7 +548,7 @@
               <div class="contact-form__submit font--light">
                 <input class="font--light button-styling" type="submit" name="submit" value="Submit" id="submitbutton">
               </div>
-           <div class="contact-form__leaves"><img src="images/intro-leaves.webp" alt=""></div>
+           <div class="contact-form__leaves contact-form__leaves__bottom"><img src="images/rsvp-leaves-2.webp" alt=""></div>
             </form>
           
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
