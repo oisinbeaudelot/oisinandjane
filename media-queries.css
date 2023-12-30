@@ -193,7 +193,8 @@
 }
 
 .destination__painting {
-  width: calc(90vw);
+  width: 90%;
+  height: auto;
   max-width: 500px;  
 }
 
