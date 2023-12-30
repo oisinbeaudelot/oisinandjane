@@ -86,11 +86,18 @@ p {
 .text__highlight {
   color: var(--secondary-color);
 }
+.text--large {
+	font-size: 1.8rem;
+}
 .text--extra-large {
-	font-size: 2.5em;
+	font-size: 2.5rem;
+  line-height: 2.6rem;
 }
 .text--justify {
   text-align: justify;
+}
+.letter-spacing {
+  letter-spacing: 0.2rem;
 }
 .white {
   color: white;
@@ -144,7 +151,7 @@ p {
 	padding: 6px 10px;
 	transition: 0.3s;
 	font-weight: 300;
-	width: 250px;
+	width: 12rem;
 	cursor: pointer;
   box-shadow: 0 0 0 1.5px var(--background-color);
 }
@@ -340,18 +347,22 @@ box-shadow:
   font-size: var(--regular-text-size);
 }
 .essentials-grid__item {
-	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 1fr 1.5fr;
 	line-height: 1.8rem;
 }
+#essentials-grid__item__dt {
+ 
+}
 .essentials-grid__item1 {
-	text-transform: uppercase;
-	text-align: right;
+	text-transform: capitalize;
+	text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
 }
 .essentials-grid__item2 {
-	text-transform: lowercase;
-	text-align: left;
+	text-align: center;
+  font-weight: 300;
 }
 .essentials-grid__button__container {
 	grid-column: span 2;
@@ -385,7 +396,7 @@ box-shadow:
   padding-bottom: 2em;
 }
 .destination__content {
-	padding: 6em 0;
+	padding: 6em 0 0 0;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -537,15 +548,21 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
   left: calc(50% + 120px);
   }
 
-.destination__margin-images__flex {
+.destination__margin-images__flex--left,  .destination__margin-images__flex--right {
   margin: 0 auto;
   max-width: 1920px;
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
   width: 20rem;
-  grid-gap: 0.5rem;
 }
+.destination__margin-images__flex--left {
+  grid-gap: 0.3rem;
+  }
+
+.destination__margin-images__flex--right {
+  grid-gap: 0.7rem;
+  }
 .destination__margin-image {
   margin: 0;
   padding: 0;
@@ -573,8 +590,15 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
 #destination__margin-image__3 {
   transform: rotate(5deg);
 }
-
-
+#destination__margin-image__4 {
+  transform: rotate(-2deg);
+}
+#destination__margin-image__5 {
+  transform: rotate(3deg);
+}
+#destination__margin-image__6 {
+  transform: rotate(-4deg);
+}
 
 
 
@@ -693,27 +717,27 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
   text-decoration: underline;
 }
 .timeline__grid__row:hover .timeline__description__body1::after, .timeline__grid__row:active .timeline__description__body1::after {
-  content: "Make your way to the beautiful courtyard of the château, ready to take your seat for the ceremony. \A";
+  content: "Make your way to the château, ready to take your seat for the ceremony.";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
 .timeline__grid__row:hover .timeline__description__body2::after, .timeline__grid__row:active .timeline__description__body2::after {
-  content: "*Il Mondo sounds* \A Everyone cries.";
+  content: "Ladies and gents, this is the moment you've waited for.";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
 .timeline__grid__row:hover .timeline__description__body3::after, .timeline__grid__row:active .timeline__description__body3::after {
-  content: "Enjoy a refreshment in the courtyard, with our photographer extraordinaire capturing some heartful moments.";
+  content: "Enjoy some bubbles and bites in the chateau courtyard, with a side of live jazz.";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
 .timeline__grid__row:hover .timeline__description__body4::after, .timeline__grid__row:active .timeline__description__body4::after {
-  content: "Dig in to 5-courses of French cuisine, with a selection of wines chosen to pair with the menu. \A";
+  content: "Dig in to 5 courses of French cuisine, with the perfect pairing of french wine. \A";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
 .timeline__grid__row:hover .timeline__description__body5::after, .timeline__grid__row:active .timeline__description__body5::after {
-  content: "On your mark, get set, BAKE!";
+  content: "Courtesy of the mother of the bride.";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
@@ -740,7 +764,7 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
 
 /* FAQ Page */
 #faqs {
-	
+	text-shadow: 0px 0px 40px #FFFFFF;
 }
 .timeline__background {
   width: 100%;
