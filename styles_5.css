@@ -747,7 +747,7 @@ box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.3);
   line-height: var(--smallest-text);
 }
 .timeline__grid__row:hover .timeline__description__body7::after, .timeline__grid__row:active .timeline__description__body7::after {
-  content: " \201c Ní geal an gáire ach san áit a mbíonn an biadh. \201D";
+  content: " \201c Ní geal an gáire ach san áit a mbíonn an biadh.\201D";
   white-space: pre-wrap;
   line-height: var(--smallest-text);
 }
@@ -847,7 +847,7 @@ cursor: pointer;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: justify;
   background-color: white;
   padding: 1rem;
     /* Layered Box-shadow */
@@ -857,6 +857,7 @@ cursor: pointer;
        0 18.8px 19.2px rgba(0, 0, 0, 0.037),
        0 22px 40px rgba(0, 0, 0, 0.019);
   cursor: pointer; 
+  font-weight: 300;
 }
 
 
