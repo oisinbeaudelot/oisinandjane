@@ -4,8 +4,8 @@ PRODID:-//ical.marudot.com//iCal Event Maker
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
 TZID:Europe/Paris
-LAST-MODIFIED:20201011T015911Z
-TZURL:http://tzurl.org/zoneinfo-outlook/Europe/Paris
+LAST-MODIFIED:20230407T050750Z
+TZURL:https://www.tzurl.org/zoneinfo-outlook/Europe/Paris
 X-LIC-LOCATION:Europe/Paris
 BEGIN:DAYLIGHT
 TZNAME:CEST
@@ -23,18 +23,18 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20220426T092145Z
-UID:1650964835516-57280@ical.marudot.com
-DTSTART;TZID=Europe/Paris:20240903T120000
-DTEND;TZID=Europe/Paris:20240905T120000
-SUMMARY:The Wedding of Oisin & Jane
-URL:oisinandjane.com
-DESCRIPTION:Tue 3rd: Arrival\nWed 4th: Wedding Day\nThu 5th: Checkout
+DTSTAMP:20231227T212448Z
+UID:1703712261828-12362@ical.marudot.com
+DTSTART;TZID=Europe/Paris:20240904T160000
+DTEND;TZID=Europe/Paris:20240905T040000
+SUMMARY:Oisin & Jane are getting married!
+URL:https://oisinandjane.com
+DESCRIPTION:FOUR O'CLOCK / seize heures: we gather\nFOUR THIRTY / seize heures trente: we do\nFIVE O'CLOCK / dix-sept heures: we toast\nSEVEN O'CLOCK / dix-neuf heures: we dine\nEIGHT THIRTY / huit heures trente: we cake\nNINE O'CLOCK / neuf heures: we dance\nELEVEN O'CLOCK / onze heures: we snack
 LOCATION:37 Rue du Calvaire\, 49270 Orée-d'Anjou\, France
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:The Wedding of Oisin & Jane
-TRIGGER:-P40W
+DESCRIPTION:Oisin & Jane are getting married!
+TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 END:VCALENDAR

@@ -34,7 +34,12 @@
 	width: 70vw;
 }
   
-  
+.page-subheading.home-menu div {
+  width: 80%;
+}
+.page-subheading__text {
+  font-size: 2.4rem;
+}
   
   
 /* ******* LANDING PAGE ****** */
@@ -149,15 +154,8 @@
 	color: var(--background-color);
   padding-bottom: 4rem;
 }
-.essentials-grid__item {
-	display: grid;
-	grid-template-columns: 1fr 1.5fr;
-	line-height: 1.8rem;
-}
-.essentials-grid__button__container {
-	grid-column: span 2;
-	padding: 10px 0px;
-}
+
+
 .essentials-grid__button {
 	margin: 0px auto;
 }  
@@ -207,9 +205,9 @@
   
 /* Margin Images */
 .destination__margin-images__container--left {
-  height: 23vw;
+  height: 26vw;
   left: 0;
-  margin-top: -25%;
+  margin-top: -27%;
 }
 .destination__margin-images__container--right {
   height: 30vw;
@@ -217,17 +215,17 @@
   margin-top: 10%;
   }
 
-.destination__margin-images__flex {
+.destination__margin-images__flex--left, .destination__margin-images__flex--right {
   margin: 0 auto;
   max-width: 1920px;
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100vw;
-  grid-gap: 0.05rem;
+  grid-gap: 0rem;
 }
 .destination__margin-image {
-  margin: 0;
+  margin: -1rem;
   padding: 0;
   z-index: 4;
   border-width: 0.2rem;
@@ -253,9 +251,8 @@
   
 .travel-options {
   grid-template-columns: 1fr;
-  margin: 0;
-  grid-gap: 10px;
-  width: 100%;
+  gap: 10px;
+  width: calc(90vw - 4em);
   margin: 1em 0 0 0;
   justify-items: center;
 }
