@@ -195,7 +195,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-image: url(images/white-paper-bg-50pctOpacity.webp);
+  background-image: url(images/white-paper-bg-50pctOpacity_comp.webp);
 }
 .hero {
   width: 100%;
@@ -1096,6 +1096,7 @@ input[type=submit] {
   margin-bottom: 30px;
   /*position: absolute;
   bottom: 0;*/
+  -webkit-border-radius:0; 
 }
 
 #diet {
