@@ -925,7 +925,7 @@ text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white; cu
   width: 100%;
 }
 .rsvp__content__form {
-  background-image: url(images/white-paper-bg-50pctOpacity.webp);
+  background-image: url("images/white-paper-bg-50pctOpacity_comp.webp");
   padding: 0px 75px 0px 75px;
   box-shadow:
        0 3.9px 4.6px rgba(0, 0, 0, 0.08),
