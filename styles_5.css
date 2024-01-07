@@ -1086,6 +1086,7 @@ input[type=submit] {
   text-decoration: none;
   cursor: pointer;
   font-size: var(--button-text);
+  -webkit-border-radius:0;
 }
 .contact-form__submit {
   text-align: center;
