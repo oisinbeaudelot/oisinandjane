@@ -288,7 +288,7 @@
   }
 /* ********** Order of Events ********** */
 .timeline__background {
-  height: 30vh;
+  height: 40vh;
   }
 
 
@@ -341,7 +341,7 @@
   
 /* ********** FAQs Page ********** */
 .faqs__background {
-  height: 120vh;
+  height: 200vh;
   max-height: none;
   position: absolute;
   background-image: url("images/chateau10_bg2.webp");
@@ -350,8 +350,9 @@
   background-repeat: no-repeat;
   bottom: 0;
   overflow: hidden;
-  opacity: 0.8;
+  opacity: 0.6;
 }  
+  
 
 .faqs__question__container {
   grid-template-columns: 1fr;
