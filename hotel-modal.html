@@ -2,90 +2,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
-  
-  
-<style>
-
-  
-
-/* ********** Chateau Info Modal ********** 
-#info-modal {
-	background-image: url(images/need-to-know-alt_blur_dark.webp);
-  background-color: white;
-}
-.info-modal-grid {
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: 1fr 1fr;
-	margin: 0 auto;
-	width: 70vw;
-	max-width: 800px;
-	min-height: 70vh;
-	align-items: center;
-	justify-items: center;
-	color: var(--background-color);
-  font-size: var(--regular-text-size);
-}
-.info-modal-grid__item {
-	line-height: 1.8rem;
-}
-  
-  .info-modal-grid__item img {
-    width: 100%;
-  }  
-  
-#info-modal-grid__item__dt {
- 
-}
-.info-modal-grid__item1 {
-	text-transform: capitalize;
-	text-align: center;
-  font-size: 1.8rem;
-  letter-spacing: 0.2rem;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-}
-.info-modal-grid__item2 {
-	text-align: center;
-  font-weight: 300;
-}
-.info-modal-grid__button__container {
-	grid-column: span 2;
-	padding: 10px 0px;
-}
-.info-modal-grid__button {
-	margin: 0px auto;
-}
-
-#info-modal-text {
-	color: #ffffff;
-}
-  
-  
-  .info-modal__hotel-image a {
-    text-align: center;
-  }  
-*/
-
-</style>  
-  
-  
-  
-  
-  
 </head>
 
 <body>
   
   
  
-  <div style='width:100%;text-align: center;mix-blend-mode: multiply;'><img style='width:100%;max-width:600px;' src='images/web-header-flowers.webp' alt=''></div>
+  <div class="info-modal-header"><img src='images/web-header-flowers.webp' alt=''></div>
   
   
-    <div class='page-subheading home-menu' style='padding:2em 0;'><div><h2 class='page-subheading__text'>Local Accommodation</h2></div></div>
+    <div class="page-subheading home-menu"><div><h2 class="page-subheading__text">Local Accommodation</h2></div></div>
 
-		<div class="info-modal-grid" style="grid-row-gap: 5em;">
+		<div class="info-modal-grid">
       
       <div class="info-modal-grid__item" id="info-modal-grid__item__dt">
 				<div class="info-modal-grid__item1">Château Chuttle</div>
@@ -104,7 +32,7 @@
       <div class="info-modal-grid__item">
 				<div class="info-modal-grid__item1">Ibis Styles Ancenis</div>
 				<div class="info-modal-grid__item2 font--light info-modal__hotel-image"><a href="https://all.accor.com/hotel/B5Z9/index.en.shtml" target="_blank"><img class="" src="images/email__01_ibis-styles__600px.webp"></a></div>
-        <div class="info-modal-grid__item2 font--light"><span style="font-weight:400;">Ibis Styles Ancenis</span> can be booked on the hotel's website or via <a href="https://www.booking.com/hotel/fr/brit-akwaba.html" target="_blank" style="color: #BD8800;">booking.com</a>.</div>
+        <div class="info-modal-grid__item2 font--light"><span class="info-modal-subheading">Ibis Styles Ancenis</span> can be booked on the hotel's website or via <a href="https://www.booking.com/hotel/fr/brit-akwaba.html" target="_blank">booking.com</a>.</div>
         <div class="info-modal-grid__item2 font--light">
           <div class="info-modal-grid__button__container"><a href="https://all.accor.com/hotel/B5Z9/index.en.shtml" target="_blank"><div class="info-modal-grid__button button-styling">Hotel Website</div></a></div>
         </div>
@@ -187,7 +115,7 @@
   
   
   
-<div style='width:100%;text-align: center;mix-blend-mode: multiply;'><img style='width:100%;max-width:600px;'  src='images/web-footer-flowers.webp' alt=''></div>  
+<div class="info-modal-footer"><img src="images/web-footer-flowers.webp" alt="flowers footer"></div>  
   
   
 </body>
