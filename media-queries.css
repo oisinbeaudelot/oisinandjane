@@ -246,13 +246,14 @@
   
   
   
-  
+ .travel-options {
+  gap: 10px;
+  }
   
 
   
-.travel-options {
+.travel-options, .accom-options {
   grid-template-columns: 1fr;
-  gap: 10px;
   width: calc(90vw - 4em);
   margin: 1em 0 0 0;
   justify-items: center;
@@ -263,10 +264,47 @@
   justify-self: center;
 }
 
-.destination__button.ferry {
+.destination__button.ferry, .accom-options.hotel-accom  {
   grid-row-start: 2;
   grid-row-end: 3;
   margin-bottom: 4em;
+}
+  
+  .accom-options {
+  }
+  
+  
+  
+/* Info modal */
+.info-modal {
+width:100dvw;
+height:100dvh;
+overflow: none;
+margin-bottom: 1em;
+}
+  
+.modal-content-chateau{
+	margin: 2em 1em;
+  padding: 1em 1em 0em 1em;
+  width: calc(100% - 4em);
+	display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: none;
+  background-image: url("images/white-paper-bg-50pctOpacity_pattern.webp");
+}
+
+
+.info-modal-grid {
+  grid-gap: 5rem;
+	grid-template-columns: 1fr;
+	margin: 2rem auto 0 auto;
+	width: auto;
+	min-height: calc(100dvh - 9.05rem);
+	align-items: center;
+	justify-items: center;
+  padding-bottom: 4rem;
 }
 
 
@@ -368,7 +406,7 @@
   
  /* ********** RSVP / Contact Page ********** */
  
-.rsvp__content__container {
+.rsvp__content__container, .petit-dej__content__container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr;
@@ -377,7 +415,7 @@
   margin: 20px 20px 0 20px;
 }
  
-  .rsvp__content__form {
+  .rsvp__content__form, .petit-dej__content__form {
     padding: 20px 20px 20px 20px;
   }
   .contact-form__radio-button {

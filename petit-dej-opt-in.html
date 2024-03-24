@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:wght@100;200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />  
+<link href="styles_5.css" rel="stylesheet" type="text/css">
+<link href="media-queries.css" rel="stylesheet" type="text/css">
+
+  
+  
+<title>Opt in For a Hearty Petit Déjeuner au Château!</title>
+</head>
+
+<body>
+  
+	<section class="page-settings" id="essentials">
+		<div class="page-heading home-menu">
+			<div class=""><h2 class="page-heading__text" id="essentials-text">Petit Déjeuner au Château</h2></div>
+		</div>
+    
+    
+		<div class="petit-dej__content__container">
+      
+      <div class="petit-dej__content__image">
+        
+      </div>
+
+      <div class="petit-dej__content__form">
+         <form name="gform" id="gform" class="contact-form__grid-item" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfkAS2VZb22fBHSAygDuwGkMjTTHwKaxoqFXVk02vHTXqQh7Q/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+           
+           <div class="contact-form__leaves contact-form__leaves__top"><img src="images/rsvp-leaves-1.webp" alt="" ></div>
+          <input required class="contact-form__text-field" type="text" id="name" name="entry.333375976" placeholder="Your Name*">
+           <div class="contact-form__radio-button__container">
+              <label class="contact-form__radio-button button-styling--dark">
+                <input required type="radio" name="entry.1952332454" value="Opt-In">
+                <span class="radio-text">Opt In For Breakfast (€30)</span>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <textarea class="contact-form__text-field" rows="3" id="message" name="entry.805448817" placeholder="Message &lpar;Optional&rpar;"></textarea>
+           
+              <div class="contact-form__submit font--light">
+                <input class="font--light button-styling" type="submit" name="submit" value="Submit" id="submitbutton">
+              </div>
+           
+           <div><a href="index.html"><div class="info-modal-grid__button button-styling button-styling--dark">Back to Home Page</div></a></div>
+           
+           <div class="contact-form__leaves contact-form__leaves__bottom"><img src="images/rsvp-leaves-2.webp" alt="" ></div>
+            </form>
+          
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+      </div>
+      
+	</div>
+    
+    
+    
+    
+    
+	</section>
+  
+  
+  
+  <script>
+  
+   document.getElementById("gform").addEventListener("submit", function (e) {
+    // Select all text input fields
+    const inputFields = document.querySelectorAll(".contact-form__text-field");
+
+    // Select the submit button
+    const submitButton = document.getElementById("submitbutton");
+
+    // Select all radio buttons
+    const radioButtons = document.querySelectorAll("input[type='radio']");
+
+    // Change the style of input fields, submit button, and radio buttons
+    inputFields.forEach(function (input) {
+        input.style.backgroundColor = "#BD8800"; // Grey background
+        input.style.color = "#fff"; // White text color
+    });
+
+    submitButton.style.backgroundColor = "#BD8800"; // Change button color to grey
+    submitButton.style.color = "#fff"; // White text color
+
+    submitButton.value = "Opt-In Recorded!"; // Change the submit button text
+
+    // After 3 seconds, revert the styles and clear the form
+    setTimeout(function () {
+        inputFields.forEach(function (input) {
+            input.style.backgroundColor = ""; // Revert background color
+            input.style.color = ""; // Revert text color
+            input.value = ""; // Clear input values
+        });
+
+        submitButton.style.backgroundColor = ""; // Revert button background color
+        submitButton.style.color = ""; // Revert button text color
+
+        submitButton.value = "Submit"; // Revert submit button text
+        
+        radioButtons.forEach(function (radio) {
+        radio.checked = false; // Uncheck radio buttons
+        });
+
+        // Reset the form
+        document.getElementById("gform").reset();
+    }, 3000); // 3 seconds (3000 milliseconds)
+
+    // Allow the form to submit after 3 seconds
+    setTimeout(function () {
+        document.getElementById("gform").submit();
+    }, 3000);
+});
+
+
+
+
+  
+  
+  </script>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+.timeline__grid__row:hover .timeline__description__body1::after, .timeline__grid__row:active .timeline__description__body1::after {
+  content: "Make your way to the château, ready to take your seat for the ceremony.";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body2::after, .timeline__grid__row:active .timeline__description__body2::after {
+  content: "Ladies and gents, this is the moment you've waited for.";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body3::after, .timeline__grid__row:active .timeline__description__body3::after {
+  content: "Enjoy some bubbles and bites in the chateau courtyard, with a side of live jazz.";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body4::after, .timeline__grid__row:active .timeline__description__body4::after {
+  content: "Dig in to 5 courses of French cuisine, with the perfect pairing of french wine. \A";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body5::after, .timeline__grid__row:active .timeline__description__body5::after {
+  content: "Courtesy of the mother of the bride.";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body6::after, .timeline__grid__row:active .timeline__description__body6::after {
+  content: "A wamba buluba, balam bamboo!";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
+.timeline__grid__row:hover .timeline__description__body7::after, .timeline__grid__row:active .timeline__description__body7::after {
+  content: " \201c Ní geal an gáire ach san áit a mbíonn an biadh.\201D";
+  white-space: pre-wrap;
+  line-height: var(--smallest-text);
+}
