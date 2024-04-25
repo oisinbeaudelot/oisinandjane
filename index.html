@@ -12,7 +12,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allison&family=Jost:wght@100;200;300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />  
-<link href="styles_5.css" rel="stylesheet" type="text/css">
+<link href="styles_6.css" rel="stylesheet" type="text/css">
+<link href="content_stylesheet.css" id="content_stylesheet" rel="stylesheet" type="text/css">
+
+
 <link href="media-queries.css" rel="stylesheet" type="text/css">
 
   
@@ -55,7 +58,7 @@
           <div class="hero__date-time__right">
             <div class="text--uppercase">Le quatre septembre</div>
             deux mille vingt-quatre<br>
-            à seize heures dans l'aprés-midi
+            à seize heures
           </div>
         </div>
       </div>
@@ -263,14 +266,101 @@
 			</div>
       
       <div class="page-subheading home-menu">
-        <div class=""><h2 class="page-subheading__text">Accommodation</h2></div>
+        <div class=""><h2 class="page-subheading__text" id="accommodation-heading">Accommodation</h2></div>
       </div>
       <div class="desktop-only spacer">&nbsp;</div>
-        <p class="text--justify">
-          Our co-ordinator is arranging lodgement at a charming nearby hotel and will be in touch in due course, once all RSVPs have been received, to assist you with your booking. A shuttle will be available for hotel guests, ensuring a seamless journey to and from the ceremony and celebration.
-          <br><br>
-          Should you wish to make your own arrangements,  you are also welcome to explore the variety of accommodation available in the Orée-d’Anjou region.
+        <p class="text--justify" id="accommodation-text">
+          Join us for an unforgettable celebration amidst the charm of the château! As we prepare to embark on this joyous occasion, we've made arrangements to accommodate our cherished guests in two distinct settings:
         </p>
+      
+      <div class="accom-options" id="accommodation-details">
+        <div class="accom-options__item">
+          <img src="images/tower.webp" alt="" >
+          <div class="button-styling destination__button chateau-accom button-styling--dark" id="accommodation-details__chateau">Staying at the Château</div>
+        </div>
+				<div class="accom-options__item">
+          <img src="images/hotel.webp" alt="" >
+          <div class="button-styling destination__button hotel-accom button-styling--dark" id="accommodation-details__hotel">Local Accommodations</div>
+        </div>
+			</div>
+          
+    
+<!-- MODAL -->
+<div id="modal-chateau" class="info-modal animate__animated animate__fadeIn animate__faster" onclick="this.style.display='none'">
+  <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <div class="modal-content-chateau">
+  </div>
+</div>
+
+<script>
+    // Function to fetch content from external file using AJAX
+    function fetchHTML(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    callback(xhr.responseText);
+                } else {
+                    console.error('Failed to fetch HTML: ' + xhr.status);
+                }
+            }
+        };
+        xhr.open('GET', url, true);
+        xhr.send();
+    }
+
+    const contentMap_info = {
+        "accommodation-details__chateau": "",
+        "accommodation-details__hotel": "" // Placeholder for the hotel content
+    };
+
+    // Get references to the modal and modal content
+    const modal_info = document.querySelector('.info-modal');
+    const modalContent_info = modal_info.querySelector('.modal-content-chateau');
+
+    // Add click event listeners to the elements with IDs
+    for (const id in contentMap_info) {
+        const element = document.getElementById(id);
+        element.addEventListener('click', () => {
+            if (id === 'accommodation-details__hotel') {
+                // Fetch hotel content from external file
+                fetchHTML('https://oisinandjane.com/hotel-modal.html', function(responseText) {
+                    contentMap_info[id] = responseText;
+                    modalContent_info.innerHTML = contentMap_info[id];
+                    modal_info.style.display = 'block';
+                });
+            } else if (id === 'accommodation-details__chateau') {
+                // Fetch chateau content from external file
+                fetchHTML('https://oisinandjane.com/chateau-modal.html', function(responseText) {
+                    contentMap_info[id] = responseText;
+                    modalContent_info.innerHTML = contentMap_info[id];
+                    modal_info.style.display = 'block';
+                });
+            } else {
+                // Populate the modal content with the corresponding text
+                modalContent_info.innerHTML = contentMap_info[id];
+                modal_info.style.display = 'block';
+            }
+        });
+    }
+</script>
+<!-- /MODAL -->
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
 		</div>
 	</section>
@@ -331,7 +421,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Gather</span><br>
+        <span class="timeline__description__header" id="we-gather">We Gather</span><br>
         <span class="timeline__description__body1"></span>
         <a href="docs/chateau_map_120ppi.pdf" target="_blank" class="timeline__description__link"><span>View a map of the chateau here.</span></a>
       </div>
@@ -345,7 +435,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Do</span><br>
+        <span class="timeline__description__header" id="we-do">We Do</span><br>
         <span class="timeline__description__body2"></span>
       </div>
     </div>
@@ -358,7 +448,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Toast</span><br>
+        <span class="timeline__description__header" id="we-toast">We Toast</span><br>
         <span class="timeline__description__body3"></span>
       </div>
     </div>
@@ -371,7 +461,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Dine</span><br>
+        <span class="timeline__description__header" id="we-dine">We Dine</span><br>
         <span class="timeline__description__body4"></span>
         <a href="docs/oisin-and-jane-wedding-menu.pdf" target="_blank"  class="timeline__description__link"><span>View the choice of menu options here.</span></a>
       </div>
@@ -385,7 +475,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Cake</span><br>
+        <span class="timeline__description__header" id="we-cake">We Cake</span><br>
         <span class="timeline__description__body5"></span>
       </div>
     </div>
@@ -393,12 +483,12 @@
     <div class="timeline__grid__row" ontouchstart="">
       <div class="timeline__grid__row__item timeline__time">
         <span class="timeline__time__english">NINE O'CLOCK</span><br>
-        <span class="timeline__time__french">vingt-et-une heures</span>
+        <span class="timeline__time__french">vingt et une heures</span>
       </div>
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Dance</span><br>
+        <span class="timeline__description__header" id="we-dance">We Dance</span><br>
         <span class="timeline__description__body6"></span>
       </div>
     </div>
@@ -411,7 +501,7 @@
       <div class="timeline__grid__row__item timeline__circle">
       </div>
       <div class="timeline__grid__row__item timeline__description">
-        <span class="timeline__description__header">We Snack</span><br>
+        <span class="timeline__description__header" id="we-snack">We Snack</span><br>
         <span class="timeline__description__body7"></span>
       </div>
     </div>
@@ -453,7 +543,7 @@
     <script>
         
         const contentMap = {
-            "faqs__question__1": "<span style='font-weight: 500; text-align: left;'>HOW DO I GET FROM MY ACCOMMODATION TO THE CHATEAU?</span><br><br> Our co-ordinator, Clara, is arranging lodgement at a charming nearby hotel, from which a shuttle bus will be available to escort you to and from the event. You will be contacted with further information in due course, once RSVPs have been received. <br><br>For those wishing to make their own travel arrangements, there is plenty of parking free of charge at the chateau.",
+            "faqs__question__1": "<span style='font-weight: 500; text-align: left;'>HOW DO I GET FROM MY ACCOMMODATION TO THE CHATEAU?</span><br><br>To ensure your journey is as seamless as possible, we've arranged for a delightful shuttle service from the meeting point at the <a href='https://maps.app.goo.gl/VbU9dzWJ3jQzyz3e7' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>Ancenis train station (la gare d'Ancenis)</a>, whisking you away to our fairytale setting where our ceremony awaits.<br><br><span style='font-weight: 500;'>The shuttle will be departing Ancenis at 15h30.</span><br><br>And don't worry about the clock striking midnight; the shuttle will be making return trips in the early hours of the morning from 02h00, ensuring you're safely back to Ancenis with memories to cherish forever.<br><br>For those wishing to make their own travel arrangements, there is plenty of parking free of charge at the chateau.<br><br>Alternatively, the château recommends the following taxi services:<ul><li>Ancenis VTC <a href='tel:0033772339273' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>+33 77 233 9273</a></li><li>Taxi Concellois <a href='tel:0033240541977' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>+33 24 054 1977</a></li></ul>",
             "faqs__question__2": "<span style='font-weight: 500; text-align: left;'>WHAT IS THE DRESS CODE?</span><br><br> Dressy Casual is the dress code. <br><br>'What is Dressy Casual' you may ask? <br><br><a style='text-decoration: underline; color: var(--secondary-color);' href='https://onefabday.com/wedding-dress-codes/#:~:text=Smart%20Casual%20or%20Dressy%20Casual%20Dress%20Code' target='_blank'>We got you.</a>",
             "faqs__question__3": "<span style='font-weight: 500; text-align: left;'>WHERE IS THE BATHROOM?</span><br><br> You can find the nearest bathrooms on our chateau map, <a style='text-decoration: underline; color: var(--secondary-color);' href='docs/chateau_map_120ppi.pdf' target='_blank'>here</a>",
             "faqs__question__4": "<span style='font-weight: 500; text-align: left;'>HOW MUCH WILL DRINKS COST?</span><br><br> All food and beverages are on us, from cocktail hour to bubbles, from local beer and cider to curated wines, so keep the wallets closed and the joie de vivre wide open!",
@@ -463,23 +553,56 @@
             "faqs__question__8": "<span style='font-weight: 500; text-align: left;'>WHERE DO I LEAVE MY FIREWORKS WHEN I ARRIVE?</span><br><br> This is not a drill, do not bring fireworks <em>(looking at you <b>Joe, Rodney, the Moores in general</b>)</em>. The chateau is a protected historic structure, and fireworks are specifically strictly prohibited. We have put the maid of honour down as collateral, please help us return Grace back to Birr safely.",
             "faqs__question__9": "<span style='font-weight: 500; text-align: left;'>WILL THERE BE DANCING?</span><br><br> There will certainly be an interpretation of it!<br><br>DJ Bow&amp;Tie will be taking the floor from 21:30. Feel free to recommend your favourite bop when you RSVP below."
         };
-        
-        
-        // Get references to the modal and modal content
-        const modal = document.querySelector('.modal');
-        const modalContent = modal.querySelector('.modal-content');
+      
+      
+      const contentMap_fr = {
+        "faqs__question__1": "<span style='font-weight: 500; text-align: left;'>COMMENT PUIS-JE ME RENDRE DE MON LOGEMENT AU CHÂTEAU ?</span><br><br>Pour garantir la fluidité de votre trajet, nous avons organisé un charmant service de navette depuis le point de rendez-vous à la <a href='https://maps.app.goo.gl/VbU9dzWJ3jQzyz3e7' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>gare d'Ancenis</a>, vous emmenant vers notre cadre féerique où vous attend notre cérémonie.<br><br><span style='font-weight: 500;'>La navette partira d'Ancenis à 15h30.</span><br><br>Et ne vous inquiétez pas de l'heure tardive; la navette effectuera des trajets de retour dans les premières heures du matin à partir de 02h00, veillant à ce que vous rentriez en toute sécurité à Ancenis avec des souvenirs à chérir pour toujours.<br><br>Pour ceux qui souhaitent organiser leurs propres déplacements, les places de parking ne manquent pas au château.<br><br>Alternativement, le château recommande les services de taxi suivants :<ul><li>Ancenis VTC <a href='tel:0033772339273' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>+33 77 233 9273</a></li><li>Taxi Concellois <a href='tel:0033240541977' target='_blank' style='text-decoration: underline; color: var(--secondary-color);'>+33 24 054 1977</a></li></ul>",
+        "faqs__question__2": "<span style='font-weight: 500; text-align: left;'>QUEL EST LE CODE VESTIMENTAIRE ?</span><br><br>La tenue décontractée chic est de rigueur. <br><br>'Qu'est-ce que la tenue décontractée chic' vous demandez-vous ? <br><br><a style='text-decoration: underline; color: var(--secondary-color);' href='https://onefabday.com/wedding-dress-codes/#:~:text=Smart%20Casual%20or%20Dressy%20Casual%20Dress%20Code' target='_blank'>Nous avons la réponse.</a>",
+        "faqs__question__3": "<span style='font-weight: 500; text-align: left;'>OÙ SE TROUVE LA SALLE DE BAINS ?</span><br><br>Vous pouvez trouver les salles de bains les plus proches sur notre plan du château, <a style='text-decoration: underline; color: var(--secondary-color);' href='docs/chateau_map_120ppi.pdf' target='_blank'>ici</a>",
+        "faqs__question__4": "<span style='font-weight: 500; text-align: left;'>COMBIEN COÛTENT LES BOISSONS ?</span><br><br>Tous les repas et boissons sont offerts, de l'heure de l'apéritif aux bulles, de la bière locale et du cidre aux vins sélectionnés, alors gardez les portefeuilles fermés et la joie de vivre grand ouverte !",
+        "faqs__question__5": "<span style='font-weight: 500; text-align: left;'>OÙ DOIS-JE M'ASSEOIR PENDANT LA CÉRÉMONIE ?</span><br><br>Sur une chaise, de préférence ! Ensuite, choisissez la chaise qui vous plaît.",
+        "faqs__question__6": "<span style='font-weight: 500; text-align: left;'>DOIS-JE ÉVITER DE PRENDRE DES PHOTOS PENDANT LA CÉRÉMONIE ?</span><br><br>Nous avons la chance d'avoir le <em>deuxième</em> meilleur photographe de mariage pour capturer toute la joie et la magie de la journée—le meilleur étant bien sûr présent en tant que convive—alors s'il vous plaît, partagez ce moment avec nous et profitez de la liberté d'une cérémonie déconnectée.",
+        "faqs__question__7": "<span style='font-weight: 500; text-align: left;'>QUAND DOIS-JE ARRIVER POUR LA CÉRÉMONIE ?</span><br><br>Prenez place pour la cérémonie à 16h00 heure locale, (l'emplacement de la cérémonie se trouve <a style='text-decoration: underline; color: var(--secondary-color);' href='docs/chateau_map_120ppi.pdf' target='_blank'>ici</a>).<br><br>La mariée remonte l’allée nuptiale à 16h30 pile !",
+        "faqs__question__8": "<span style='font-weight: 500; text-align: left;'>OÙ DOIS-JE LAISSER MES FEUX D'ARTIFICE QUAND J'ARRIVE ?</span><br><br>Il ne s'agit pas d'un exercice, ne pas apporter de feux d'artifice <em>(en regardant vous, <b>Joe, Rodney, les Moores en général</b>)</em>. Le château est une structure historique protégée, et les feux d'artifice sont strictement interdits. Nous avons mis la demoiselle d'honneur en gage, veuillez nous aider à ramener Grace saine et sauve à Birr.",
+        "faqs__question__9": "<span style='font-weight: 500; text-align: left;'>Y AURA-T-IL DE LA DANSE ?</span><br><br>Il y aura certainement une interprétation de celle-ci !<br><br>DJ Bow&Tie prendra le relais à partir de 21h30. N'hésitez pas à recommander votre 'bop' préféré lorsque vous confirmerez votre présence ci-dessous."
+    };
 
-        // Add click event listeners to the elements with IDs
+        
+       // Function to get the browser language
+    function getBrowserLanguage() {
+        return navigator.language || navigator.userLanguage;
+    }
+
+    // Get references to the modal and modal content
+    const modal = document.querySelector('.modal');
+    const modalContent = modal.querySelector('.modal-content');
+
+    // Check if the browser language is French
+    if (getBrowserLanguage().toLowerCase().startsWith('fr')) {
+        // Change content to French version
+        for (const id in contentMap_fr) {
+            const element = document.getElementById(id);
+            element.addEventListener('click', () => {
+                // Populate the modal content with the corresponding French text
+                modalContent.innerHTML = contentMap_fr[id];
+
+                // Show the modal
+                modal.style.display = 'block';
+            });
+        }
+    } else {
+        // Add click event listeners to the elements with IDs for English content
         for (const id in contentMap) {
             const element = document.getElementById(id);
             element.addEventListener('click', () => {
-                // Populate the modal content with the corresponding text
+                // Populate the modal content with the corresponding English text
                 modalContent.innerHTML = contentMap[id];
 
                 // Show the modal
                 modal.style.display = 'block';
             });
         }
+    }
     </script>
     <!-- /MODAL -->
     
@@ -517,12 +640,12 @@
            <div class="contact-form__radio-button__container">
               <label class="contact-form__radio-button button-styling--dark">
                 <input type="radio" name="entry.1452078983" value="Will Attend">
-                <span class="radio-text">Will Attend</span>
+                <span class="radio-text" id="will-attend">Will Attend</span>
                 <span class="checkmark"></span>
               </label>
               <label class="contact-form__radio-button button-styling--dark">
                 <input type="radio" name="entry.1452078983" value="Will Not Attend">
-                <span class="radio-text">Will Not Attend</span>
+                <span class="radio-text" id="will-not-attend">Will Not Attend</span>
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -681,7 +804,7 @@
           document.getElementById('countdown__labels__hours').innerText = 'Heures';
           document.getElementById('countdown__labels__seconds').innerText = 'Secondes';
           document.getElementById('rsvpButton').innerText = 'RSVP Maintenant';
-          document.getElementById('intro__text').innerHTML = 'Chers amis et proches,<br><br><br>Nous sommes ravis de partager notre joie avec vous en ce jour spécial de nos vies, au magnifique Château de la Colaissière.<br><br>En préparation pour le grand jour, nous avons créé ce site pour partager toutes les nouvelles et mises à jour en un seul endroit. Vous y trouverez toutes les informations nécessaires concernant le voyage, l\'hébergement, l\'ordre des événements, et bien sûr, la confirmation de votre présence (RSVP) !<br><br>À bientôt à Orée-d\'Anjou!<br><br><span class="intro__sig"><img src="images/oisin-x-jane.svg" alt="oisin and jane signature" ></span>';
+          document.getElementById('intro__text').innerHTML = 'Chers amis et proches,<br><br><br>Nous sommes ravis de partager notre joie avec vous en ce jour spécial de notre vie, au magnifique Château de la Colaissière.<br><br>En préparation pour le grand jour, nous avons créé ce site pour partager toutes les nouvelles et mises à jour en un seul endroit. Vous y trouverez toutes les informations nécessaires concernant le voyage, l\'hébergement, l\'ordre des événements, et bien sûr, la confirmation de votre présence (RSVP) !<br><br>À bientôt à Saint-Sauveur-de-Landemont!<br><br><span class="intro__sig"><img src="images/oisin-x-jane.svg" alt="oisin and jane signature" ></span>';
           document.getElementById('page-heading__text__the_countdown').innerText = 'Le Compte à Rebours';
           document.getElementById('essentials-text').innerText = 'Les Essentiels';
           document.getElementById('page-heading__text__the_destination').innerText = 'La Destination';
@@ -700,14 +823,56 @@
           
           document.getElementById('dress-code-a-note-about-gifts').innerHTML = '<div class="essentials-grid__item1">Code vestimentaire</div><div class="essentials-grid__item2">Élégant Décontracté<br><br><br></div><div class="essentials-grid__item1">Au sujet des cadeaux</div><div class="essentials-grid__item2">Nous ne pourrions rien demander de plus de votre part, donc s\'il vous plaît, aucun cadeau n\'est nécessaire.</div>'; 
           
-          document.getElementById('menu-options').innerHTML = 'Options&nbsp;de menu'; 
+          document.getElementById('menu-options').innerHTML = 'Options menu'; 
           
-          document.getElementById('destination-paragraph').innerHTML = 'Installé au cœur de la captivante vallée de la Loire, le Château de la Colaissière séduit par son élégance intemporelle et son charme romantique. Imprégné d\'histoire et entouré de jardins étendus, ce château à couper le souffle offre un décor de conte de fées pour une expérience inoubliable.<br><br>Nous sommes impatients de partager cette enchantement avec vous, alors que nous échangeons nos vœux entourés de nos amis et de notre famille chéris.'; 
+          document.getElementById('destination-paragraph').innerHTML = 'Installé au cœur de la captivante vallée de la Loire, le Château de la Colaissière séduit par son élégance intemporelle et son charme romantique. Imprégné d\'histoire et entouré de jardins étendus, ce château à couper le souffle offre un décor de conte de fées pour une expérience inoubliable.<br><br>Nous sommes impatients de partager cet enchantement avec vous, alors que nous échangerons nos vœux entourés de tout ceux qui nous sont chers.'; 
           
-        document.getElementById('travel-options').innerHTML = 'Options&nbsp;de menu';
+        document.getElementById('travel-options').innerHTML = 'Options menu';
           
          document.getElementById('travel-options-details').innerHTML ='<img src="images/travel---ferry_cc___.webp" alt="" > <img src="images/travel---airplane.webp" alt="" > <a class="button-styling destination__button ferry button-styling--dark" href="https://www.irishferries.com/ie-en/Travel-to-France/" target="_blank">en Bateau</a> <a href="https://www.ryanair.com/ie/en/trip/flights/select?adults=1&teens=0&children=0&infants=0&dateOut=2024-09-03&dateIn=2024-09-05&isConnectedFlight=false&isReturn=true&discount=0&promoCode=&originIata=DUB&destinationIata=NTE&tpAdults=1&tpTeens=0&tpChildren=0&tpInfants=0&tpStartDate=2024-09-03&tpEndDate=2024-09-05&tpDiscount=0&tpPromoCode=&tpOriginIata=DUB&tpDestinationIata=NTE" target="_blank" class="button-styling airplane destination__button button-styling--dark">avec Ryanair</a><div></div><a href="https://www.aerlingus.com/html/flightSearchResult.html#/fareType=RETURN&fareCategory=ECONOMY&sourceAirportCode_0=DUB&destinationAirportCode_0=NTE&departureDate_0=2024-09-02&sourceAirportCode_1=NTE&destinationAirportCode_1=DUB&departureDate_1=2024-09-05&numAdults=1&numYoungAdults=0&numChildren=0&numInfants=0&promoCode=&groupBooking=false" class="button-styling airplane destination__button button-styling--dark" target="_blank">avec Aer Lingus</a>';
           
+          
+        document.getElementById('accommodation-heading').innerHTML = 'Hébergement';
+          
+        document.getElementById('accommodation-text').innerHTML = 'Rejoignez-nous pour une célébration inoubliable au milieu du charme du château ! Alors que nous nous préparons à nous lancer dans cette occasion joyeuse, nous avons organisé l\'hébergement de nos précieux invités dans deux lieux distincts :';
+          
+        document.getElementById('accommodation-details__chateau').innerHTML = 'Séjour au Château';
+          
+        document.getElementById('accommodation-details__hotel').innerHTML = 'Hébergements Locaux';
+          
+        document.getElementById('we-gather').innerHTML = 'Nous Nous Rassemblons';
+        document.getElementById('we-do').innerHTML = 'Nous Disons Oui';
+        document.getElementById('we-toast').innerHTML = 'Nous Trinquons';
+        document.getElementById('we-dine').innerHTML = 'Nous Dînons';
+        document.getElementById('we-cake').innerHTML = 'Nous Gâteau-ons';
+        document.getElementById('we-dance').innerHTML = 'Nous Dansons';
+        document.getElementById('we-snack').innerHTML = 'Nous Grignotons';
+          
+        document.getElementById('faqs__question__1').innerHTML = 'Comment puis-je me rendre de mon hébergement au château?';
+        document.getElementById('faqs__question__2').innerHTML = 'Quel est le code vestimentaire?';
+        document.getElementById('faqs__question__3').innerHTML = 'Où sont les toilettes?';
+        document.getElementById('faqs__question__4').innerHTML = 'Combien coûtent les boissons?';
+        document.getElementById('faqs__question__5').innerHTML = 'Où dois-je m\'asseoir pendant la cérémonie?';
+        document.getElementById('faqs__question__6').innerHTML = 'Dois-je éviter de prendre des photos pendant la cérémonie?';
+        document.getElementById('faqs__question__7').innerHTML = 'À quelle heure dois-je arriver?';
+        document.getElementById('faqs__question__8').innerHTML = 'Où dois-je laisser mes feux d\'artifice quand j\'arrive?';
+        document.getElementById('faqs__question__9').innerHTML = 'Y aura-t-il de la danse?';
+        
+        document.getElementById('will-attend').innerHTML = 'Assistera';
+          
+        document.getElementById('will-not-attend').innerHTML = 'N\'assistera Pas';
+          
+        
+        document.getElementById('name').placeholder = 'Votre nom*';
+        document.getElementById('email').placeholder = 'Votre adresse email*';
+        document.getElementById('diet').placeholder = 'Exigences alimentaires';
+        document.getElementById('song').placeholder = 'Demande de chanson';
+        document.getElementById('message').placeholder = 'Message';
+        document.getElementById('submitbutton').value = 'Envoyer';
+          
+        document.getElementById('content_stylesheet').href = 'content_stylesheet_fr.css';
+          
+        
           
           
         
