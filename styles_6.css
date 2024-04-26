@@ -721,6 +721,9 @@ cursor: pointer;
   max-width: 95%;
 }
 
+.info-modal-grid__item__span2 {
+  grid-column: 1/span 2;
+}
 
 
 
