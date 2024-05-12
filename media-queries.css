@@ -159,6 +159,10 @@
 .essentials-grid__button {
 	margin: 0px auto;
 }  
+  
+.essentials-grid__item--2fr {
+  grid-column: span 1;
+}
 
 /* ********** Destination Page ********** */
 

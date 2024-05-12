@@ -111,6 +111,13 @@ p {
   background-size: cover;
   position: relative;
 }
+/* PAGE TEMPLATE ELEMENTS */
+.page-settings__cer__aft {
+	width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 .page-heading, .page-subheading {
 	padding-top: 6.25rem;
   font-family: var(--font-cursive);
@@ -363,6 +370,9 @@ box-shadow:
 .essentials-grid__item2 {
 	text-align: center;
   font-weight: 300;
+}
+.essentials-grid__item--2fr {
+  grid-column: span 2;
 }
 .essentials-grid__button__container {
 	grid-column: span 2;
@@ -752,6 +762,17 @@ cursor: pointer;
   align-items: center;
   justify-content: center;
 }
+
+.timeline__position-container__cer__aft {
+  min-height: calc(70vh - 100px - 2.8rem);
+  max-width: 1000px;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .timeline__height-container {
   height: auto;
   display: flex;
